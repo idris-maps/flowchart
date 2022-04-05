@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<title>Flowchart - about</title>
+
+	<link rel='icon' type='image/svg' href='/favicon.svg'>
+	<link rel='stylesheet' href='/global.css'>
+	<link rel='stylesheet' href='/build/bundle.css'>
+</head>
+
+<body>
+    <header>
+        <img src="favicon.svg" alt="icon" />
+        <a href="/">
+            <button class="invert">Back to chart</button>
+        </a>
+    </header>
+    <main>
+        <h1>About</h1>
+        <p>
+            <b>Flowchart</b> is a tool to easily draw relations between nodes. The resulting <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> is unopinionated enough to integrate seamlessly in your design. 
+        </p>
+        <p>
+            The minimal features are intended. If you are looking for something fancy, checkout <a href="https://graphviz.org">graphviz</a> or <a href="https://mermaid-js.github.io/mermaid">mermaid</a>.
+        </p>
+
+        <h2>Syntax</h2>
+
+        <p>Every line represents a relation between two nodes as: <pre>FROM LINK TO</pre>
+            <br/>
+            where <code>FROM</code> and <code>TO</code> can be defined either as:
+            <code>ID[LABEL]</code>
+            or just as:
+            <code>LABEL</code>.
+            <br />
+            Labels only need to be defined only once.
+        </p>
+        <div class="col-2">
+            <div>
+        <p>This:</p>
+                <pre>
+A[Alice] -> B[Bob]
+B -> A
+                </pre>
+            </div>
+            <div>
+                <p>is equivalent to:</p>
+                <pre>
+Alice -> Bob
+Bob -> Alice
+                </pre>
+            </div>
+        </div>
+        <div class="col-2">
+            <p>Both will result in:</p>
+            <div style="max-width:100px;">
+                <svg viewBox="0 0 107.5 130" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow-head-currentColor" orient="auto" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="strokeWidth" markerWidth="5" markerHeight="5"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path></marker></defs><g transform="translate(10, 10)"><g class="edges"><path d="M 40 30 Q 33.75 55 40 80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-dasharray="1 0" marker-end="url(#arrow-head-currentColor)"></path><path d="M 47.5 80 Q 53.75 55 47.5 30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-dasharray="1 0" marker-end="url(#arrow-head-currentColor)"></path></g><g class="node-A"><rect x="0" y="0" width="87.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="43.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Alice</text></g><g class="node-B"><rect x="11.5" y="80" width="64.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="43.75" y="99.8" text-anchor="middle" font-size="16" fill="currentColor">Bob</text></g></g></svg>
+            </div>
+        </div>
+        <p><pre>LINK</pre>s can be a line, dashed or dotted and with or without arrow.</p>
+        <div class="col-2">
+            <pre>
+Alice -> Bob
+            </pre>
+            <div style="max-width:220px">
+                <svg viewBox="0 0 222 50" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow-head-currentColor" orient="auto" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="strokeWidth" markerWidth="5" markerHeight="5"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path></marker></defs><g transform="translate(10, 10)"><g class="edges"><path d="M 87.5 15 Q 112.5 15 137.5 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-dasharray="1 0" marker-end="url(#arrow-head-currentColor)"></path></g><g class="node-Alice"><rect x="0" y="0" width="87.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="43.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Alice</text></g><g class="node-Bob"><rect x="137.5" y="0" width="64.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="169.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Bob</text></g></g></svg>
+            </div>
+        </div>
+        <div class="col-2">
+            <pre>
+Alice - Bob
+            </pre>
+            <div style="max-width:220px">
+                <svg viewBox="0 0 222 50" xmlns="http://www.w3.org/2000/svg"><g transform="translate(10, 10)"><g class="edges"><path d="M 87.5 15 Q 112.5 15 137.5 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-dasharray="1 0"></path></g><g class="node-Alice"><rect x="0" y="0" width="87.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="43.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Alice</text></g><g class="node-Bob"><rect x="137.5" y="0" width="64.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="169.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Bob</text></g></g></svg>
+            </div>
+        </div>
+        <div class="col-2">
+            <pre>
+Alice --> Bob
+            </pre>
+            <div style="max-width:220px">
+                <svg viewBox="0 0 222 50" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow-head-currentColor" orient="auto" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="strokeWidth" markerWidth="5" markerHeight="5"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path></marker></defs><g transform="translate(10, 10)"><g class="edges"><path d="M 87.5 15 Q 112.5 15 137.5 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-dasharray="2 3" marker-end="url(#arrow-head-currentColor)"></path></g><g class="node-Alice"><rect x="0" y="0" width="87.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="43.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Alice</text></g><g class="node-Bob"><rect x="137.5" y="0" width="64.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="169.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Bob</text></g></g></svg>
+            </div>
+        </div>
+        <div class="col-2">
+            <pre>
+Alice -- Bob
+            </pre>
+            <div style="max-width:220px">
+                <svg viewBox="0 0 222 50" xmlns="http://www.w3.org/2000/svg"><g transform="translate(10, 10)"><g class="edges"><path d="M 87.5 15 Q 112.5 15 137.5 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-dasharray="2 3"></path></g><g class="node-Alice"><rect x="0" y="0" width="87.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="43.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Alice</text></g><g class="node-Bob"><rect x="137.5" y="0" width="64.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="169.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Bob</text></g></g></svg>
+            </div>
+        </div>
+        <div class="col-2">
+            <pre>
+Alice ..> Bob
+            </pre>
+            <div style="max-width:220px">
+                <svg viewBox="0 0 222 50" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow-head-currentColor" orient="auto" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="strokeWidth" markerWidth="5" markerHeight="5"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path></marker></defs><g transform="translate(10, 10)"><g class="edges"><path d="M 87.5 15 Q 112.5 15 137.5 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-dasharray="0.5 1.5" marker-end="url(#arrow-head-currentColor)"></path></g><g class="node-Alice"><rect x="0" y="0" width="87.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="43.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Alice</text></g><g class="node-Bob"><rect x="137.5" y="0" width="64.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="169.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Bob</text></g></g></svg>
+            </div>
+        </div>
+        <div class="col-2">
+            <pre>
+Alice .. Bob
+            </pre>
+            <div style="max-width:220px">
+                <svg viewBox="0 0 222 50" xmlns="http://www.w3.org/2000/svg"><g transform="translate(10, 10)"><g class="edges"><path d="M 87.5 15 Q 112.5 15 137.5 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-dasharray="0.5 1.5"></path></g><g class="node-Alice"><rect x="0" y="0" width="87.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="43.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Alice</text></g><g class="node-Bob"><rect x="137.5" y="0" width="64.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="169.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Bob</text></g></g></svg>
+            </div>
+        </div>
+        <p>The only configuration is <code>dir</code>, the direction of the graph. It defaults to <code>TB</code> (top to bottom).</p>
+        <div class="col-2">
+            <pre>
+dir: TB
+Alice -> Bob
+            </pre>
+            <div style="max-width:100px">
+                <svg viewBox="0 0 107.5 130" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow-head-currentColor" orient="auto" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="strokeWidth" markerWidth="5" markerHeight="5"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path></marker></defs><g transform="translate(10, 10)"><g class="edges"><path d="M 43.75 30 Q 43.75 55 43.75 80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-dasharray="1 0" marker-end="url(#arrow-head-currentColor)"></path></g><g class="node-A"><rect x="0" y="0" width="87.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="43.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Alice</text></g><g class="node-B"><rect x="11.5" y="80" width="64.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="43.75" y="99.8" text-anchor="middle" font-size="16" fill="currentColor">Bob</text></g></g></svg>
+            </div>
+        </div>
+        <div class="col-2">
+            <pre>
+dir: BT
+Alice -> Bob
+            </pre>
+            <div style="max-width:100px">
+                <svg viewBox="0 0 107.5 130" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow-head-currentColor" orient="auto" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="strokeWidth" markerWidth="5" markerHeight="5"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path></marker></defs><g transform="translate(10, 10)"><g class="edges"><path d="M 43.75 80 Q 43.75 55 43.75 30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-dasharray="1 0" marker-end="url(#arrow-head-currentColor)"></path></g><g class="node-A"><rect x="0" y="80" width="87.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="43.75" y="99.8" text-anchor="middle" font-size="16" fill="currentColor">Alice</text></g><g class="node-B"><rect x="11.5" y="0" width="64.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="43.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Bob</text></g></g></svg>
+            </div>
+        </div>
+        <div class="col-2">
+            <pre>
+dir: LR
+Alice -> Bob
+            </pre>
+            <div style="max-width:220px">
+                <svg viewBox="0 0 222 50" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow-head-currentColor" orient="auto" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="strokeWidth" markerWidth="5" markerHeight="5"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path></marker></defs><g transform="translate(10, 10)"><g class="edges"><path d="M 87.5 15 Q 112.5 15 137.5 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-dasharray="1 0" marker-end="url(#arrow-head-currentColor)"></path></g><g class="node-A"><rect x="0" y="0" width="87.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="43.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Alice</text></g><g class="node-B"><rect x="137.5" y="0" width="64.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="169.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Bob</text></g></g></svg>
+            </div>
+        </div>
+        <div class="col-2">
+            <pre>
+dir: RL
+Alice -> Bob
+            </pre>
+            <div style="max-width:220px">
+                <svg viewBox="0 0 222 50" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow-head-currentColor" orient="auto" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="strokeWidth" markerWidth="5" markerHeight="5"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path></marker></defs><g transform="translate(10, 10)"><g class="edges"><path d="M 114.5 15 Q 89.5 15 64.5 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-dasharray="1 0" marker-end="url(#arrow-head-currentColor)"></path></g><g class="node-A"><rect x="114.5" y="0" width="87.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="158.25" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Alice</text></g><g class="node-B"><rect x="0" y="0" width="64.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="32.25" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Bob</text></g></g></svg>
+            </div>
+        </div>
+
+        <h2>Styling</h2>
+
+        <p>The resulting SVG has no opinion on style. When integrated in a web page, colors and font depend on the parent CSS.</p>
+        <p>When put inside an element with the following CSS:</p>
+        <pre>
+&lt;div style="background-color:indianred;color:white;font-family:serif"&gt;
+    &lt;!-- SVG goes here --&gt;
+&lt;/div&gt;
+        </pre>
+        <p>the chart looks like this:</p>
+        <div style="background-color:indianred;color:white;font-family:serif;max-width:220px;margin:auto;">
+            <svg viewBox="0 0 222 50" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow-head-currentColor" orient="auto" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="strokeWidth" markerWidth="5" markerHeight="5"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path></marker></defs><g transform="translate(10, 10)"><g class="edges"><path d="M 87.5 15 Q 112.5 15 137.5 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-dasharray="1 0" marker-end="url(#arrow-head-currentColor)"></path></g><g class="node-A"><rect x="0" y="0" width="87.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="43.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Alice</text></g><g class="node-B"><rect x="137.5" y="0" width="64.5" height="30" fill="currentColor" stroke="currentColor" rx="3" fill-opacity="0.05" stroke-opacity="0.5"></rect><text x="169.75" y="19.8" text-anchor="middle" font-size="16" fill="currentColor">Bob</text></g></g></svg>
+        </div>
+
+        <h2>Credits</h2>
+
+        <p>Made with <a href="https://github.com/dagrejs/dagre">Dagre</a> and <a href="https://github.com/sveltejs/svelte">Svelte</a> by <a href="https://github.com/idris-maps">me</a>.</p>
+    </main>
+</body>
+</html>

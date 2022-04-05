@@ -1,0 +1,86 @@
+:root {
+	--bg-color: rgb(44, 40, 40);
+	--color: rgb(245, 237, 203);;
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+  	overflow-x: hidden;
+}
+
+body {
+	color: var(--color);
+  	background-color: var(--bg-color);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+textarea {
+	background-color: inherit;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0.8em;
+	border: none;
+	outline: none;
+	resize: none;
+	width: 100%;
+	height: 100%;
+}
+
+button {
+	background-color: var(--bg-color);
+	color: var(--color);
+	padding: 0.5em 0.8em;
+	border: none;
+	border-radius: 0.3em;
+	cursor: pointer;
+}
+
+button.invert {
+	background-color: var(--color);
+	color: var(--bg-color);
+}
+
+header {
+	width: 100vw;
+	display: grid;
+	grid-template-columns: auto 10em;
+}
+
+header > * {
+	padding: 1em;
+}
+
+header img {
+	max-height: 2em;
+}
+
+main {
+	width: 100vw;
+	max-width: 700px;
+	margin: auto;
+	padding: 1em;
+}
+
+p {
+	overflow-wrap: break-word;
+	text-justify: auto;
+}
+
+a {
+	color: var(--color);
+}
+
+pre {
+	display: inline-block;
+}
+
+.col-2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
