@@ -5,7 +5,6 @@
 
   export let separatorColor: string = 'lightgray'
   export let separatorWidth: string = '2px'
-  export let minSize: number = 0
   export let onViewChange: (landscape: boolean) => void
 
   let landscape = true
